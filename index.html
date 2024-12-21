@@ -1,133 +1,159 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <title>申請網頁</title>
+    <meta charset="UTF-8">
+    <title>The 6th Wehelp Bootcamp Application</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
+            margin: 20px;
         }
-
-        header {
-            background: #4b79a1; 
-            background: linear-gradient(to right, #283e51, #4b79a1); 
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1, h2 {
-            margin-top: 0;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            border-left: 4px solid #283e51;
-            padding-left: 10px;
-            color: #283e51;
-        }
-
-        p {
-            margin: 10px 0;
-            text-indent: 2em;
-        }
-
-        /* 可針對問題加上較明顯的強調 */
-        .question {
+        h1 {
             font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
+            text-align: center;
+            color: #1E90FF; /* 亮藍色 */
+        }
+        .toc {
+            margin: 20px 0;
+            text-align: center; /* 居中表格 */
+        }
+        .toc table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            table-layout: fixed; /* 固定表格布局，確保列寬均等 */
+        }
+        .toc td {
+            padding: 10px;
+            text-align: left; /* 文字靠左對齊 */
+            vertical-align: top; /* 垂直頂部對齊 */
+            width: 25%; /* 四列均分 */
+        }
+        .toc a {
+            background-color: #006400; /* 深綠色 */
+            color: #FFFFFF; /* 白色文字以增加對比度 */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px; /* 提供足夠的點擊區域 */
+            border-radius: 4px;
+            display: block; /* 使連結填滿單元格的寬度 */
+            height: 100px; /* 固定高度，與Q5的背景區塊大小一致 */
+            box-sizing: border-box; /* 包括內邊距和邊框在內的寬度和高度 */
+            word-wrap: break-word; /* 允許文字換行以防止溢出 */
+        }
+        .toc a:hover {
+            background-color: #004d00; /* 更深的綠色，懸停效果 */
+        }
+        .question {
+            margin-top: 40px;
+        }
+        .question h2 {
+            font-weight: bold; /* 確保粗體 */
+            color: #2F4F4F;
+        }
+        .answer {
+            margin-top: 10px;
         }
 
-        footer {
-            text-align: center;
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 40px;
-            padding: 20px 0;
+        /* 響應式設計：當瀏覽器寬度小於600px時，目錄表格轉換為單列布局 */
+        @media (max-width: 600px) {
+            .toc table, .toc tr, .toc td {
+                display: block;
+                width: 100%;
+            }
+            .toc tr {
+                margin-bottom: 10px;
+            }
+            .toc td {
+                padding: 5px 0;
+                text-align: left; /* 確保小屏幕上文字仍然靠左對齊 */
+                width: 100%; /* 單列布局時，單元格寬度100% */
+            }
+            .toc a {
+                width: 100%;
+                box-sizing: border-box;
+                height: auto; /* 自動調整高度以適應內容 */
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>申請者自我介紹與回應</h1>
-    </header>
-    <div class="container">
-        <section>
-            <h2>個人簡介和申請動機</h2>
-            <div class="question">問題：</div>
-            <p>您好，我是一位對軟體工程與資訊產業充滿熱誠的學習者。目前擁有數年非正式的程式語言自學經驗，曾經在業餘時間完成過小型的網頁開發專案。我希望透過此訓練計畫更深入了解軟體開發流程，強化自身的基礎與實務能力，以求日後在職場上成為能獨立解決問題並具備創造力的工程師。</p>
-        </section>
 
-        <section>
-            <h2>曾經做過哪些軟體工程技術相關的學習？若有作品請分享。</h2>
-            <div class="question">問題：</div>
-            <p>我曾經自學 HTML、CSS、JavaScript 以及基本的前端框架（如 React）。此外，也嘗試了解後端基礎，如 Node.js 與 Express，以及基礎的資料庫操作（MySQL/MongoDB）。</p>
-            <p>作品方面，我在 GitHub 上有一些小型的前端專案示例，例如一個簡單的待辦清單應用程式（To-do App），以及一個可以查詢天氣資訊的單頁式應用程式。這些作品目前皆已上傳至我的 GitHub 儲存庫中（<a href="https://github.com/your-username" target="_blank">https://github.com/your-username</a>）。</p>
-        </section>
+    <h1>The 6th Wehelp Bootcamp Application</h1>
 
-        <section>
-            <h2>如果參與這個訓練，會怎麼安排學習時間？</h2>
-            <div class="question">問題：</div>
-            <p>我計劃每日安排固定的學習時段，例如每晚 8 點至 11 點專心學習培訓課程內容並進行實作練習。此外，我會在周末花更多時間進行延伸閱讀與整理本週所學，並嘗試實際動手建構小型專案以加深理解。</p>
-        </section>
-
-        <section>
-            <h2>軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？</h2>
-            <div class="question">問題：</div>
-            <p>我會持續追蹤業界趨勢與招聘市場的需求，並參考各大技術社群的討論方向。另外也會嘗試藉由小型實驗性專案來檢驗該技術的實用性與難易度，以此判斷是否將心力投注於該領域。</p>
-        </section>
-
-        <section>
-            <h2>請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</h2>
-            <div class="question">問題：</div>
-            <p>曾經在一個專案中，我因為缺乏經驗導致專案時程延遲，團隊成員對此表達不滿，令我感到沮喪。當下我先接受自己的挫折感，深呼吸並冷靜分析延遲的原因，再與團隊坦誠溝通提出改進計畫，並在後續每天檢視進度。透過這些行動，我將負面情緒轉化為改善動力，最後成功將專案拉回正軌。</p>
-        </section>
-
-        <section>
-            <h2>關於這份申請網頁，分享一個開發時的技術心得。</h2>
-            <div class="question">問題：</div>
-            <p>在開發這頁面時，我再次感受到語意化標籤與適當的 CSS 排版方式的重要性。透過合理使用 <code>&lt;section&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;footer&gt;</code> 等標籤，可以讓程式碼更容易維護與閱讀。此外，使用簡單的漸層背景與清晰的字型配置，可在不依賴過多外部套件的前提下，達到舒適的閱讀體驗。</p>
-        </section>
-
-        <section>
-            <h2>如何看待自身工作和整個社會群體的連結關係？</h2>
-            <div class="question">問題：</div>
-            <p>我相信軟體工程師的工作不僅是在寫程式，而是提供解決問題的方案。透過我所開發的產品或工具，可以改善人們的生活品質並提升生產力，進而為整個社會帶來正面影響。身為工程師，我希望能在自己的專業中貢獻一份心力，推動社會向前發展。</p>
-        </section>
-
-        <section>
-            <h2>從上次提出申請至今，多做了哪些努力？（第一次申請不用回答）</h2>
-            <div class="question">問題：</div>
-            <p>（若此為後續申請時可回答：自上次申請後，我每天投入固定時間複習資料結構與演算法，並完成了兩本相關技術書籍的精讀筆記。同時，我也參加了數場線上研討會與社群活動，積極與其他工程師交流技術心得。）</p>
-        </section>
-
-        <section>
-            <h2>其他想要對我們說的事情？</h2>
-            <div class="question">問題：</div>
-            <p>我非常感謝有此機會展示自己的學習態度與進步歷程。無論結果如何，我都會持續努力學習，希望未來有機會在實際工作環境中貢獻所學。</p>
-        </section>
+    <div class="toc">
+        <table>
+            <tr>
+                <td><a href="#q1">Q1: 個人簡介和申請動機</a></td>
+                <td><a href="#q2">Q2: 曾經做過哪些軟體工程技術相關的學習？若有作品請分享給我們。</a></td>
+                <td><a href="#q3">Q3: 如果參與這個訓練，會怎麼安排學習時間？</a></td>
+                <td><a href="#q4">Q4: 軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？</a></td>
+            </tr>
+            <tr>
+                <td><a href="#q5">Q5: 請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</a></td>
+                <td><a href="#q6">Q6: 關於這份申請網頁，分享一個開發時的技術心得。</a></td>
+                <td><a href="#q7">Q7: 如何看待自身工作和整個社會群體的連結關係？</a></td>
+                <td><a href="#q8">Q8: 其他想要對我們說的事情？</a></td>
+            </tr>
+        </table>
     </div>
-    <footer>
-        <p>© 2024 申請者網頁示例</p>
-    </footer>
+
+    <div class="question" id="q1">
+        <h2>Q1: 個人簡介和申請動機</h2>
+        <div class="answer">
+            <p>您好，我叫張三，目前就讀於國立台灣大學資訊工程學系。我對軟體開發充滿熱情，並希望能夠在Wehelp Bootcamp中進一步提升我的技術能力，與志同道合的夥伴共同學習與成長。</p>
+        </div>
+    </div>
+
+    <div class="question" id="q2">
+        <h2>Q2: 曾經做過哪些軟體工程技術相關的學習？若有作品請分享給我們。</h2>
+        <div class="answer">
+            <p>我曾學習過Python、JavaScript、以及React框架，並參與開發過一個線上待辦事項應用程式。該應用程式具備用戶註冊、任務管理以及數據同步功能，歡迎您訪問我的GitHub帳號了解更多作品。</p>
+            <p><a href="https://github.com/yourusername" target="_blank">我的GitHub</a></p>
+        </div>
+    </div>
+
+    <div class="question" id="q3">
+        <h2>Q3: 如果參與這個訓練，會怎麼安排學習時間？</h2>
+        <div class="answer">
+            <p>我計劃每天安排2小時的自學時間，專注於課程內容和實作練習。另外，利用週末參加線上研討會和與團隊成員討論，確保能夠有效吸收和應用所學知識。</p>
+        </div>
+    </div>
+
+    <div class="question" id="q4">
+        <h2>Q4: 軟體技術日新月異，如何確定選擇投入的領域是正確有回報的？</h2>
+        <div class="answer">
+            <p>我會定期關注行業趨勢和技術發展，參加相關的技術會議和社群活動，並與業界專業人士交流。此外，通過實踐項目和持續學習，評估自己在該領域的興趣和能力，以確保選擇的方向具有長遠的發展潛力。</p>
+        </div>
+    </div>
+
+    <div class="question" id="q5">
+        <h2>Q5: 請描述一件產生明顯負面情緒的經歷，如何處理該情緒？</h2>
+        <div class="answer">
+            <p>在一個項目中，我遇到了嚴重的技術瓶頸，導致進度延遲，這讓我感到非常沮喪。為了處理這種情緒，我決定暫時休息，進行運動和冥想，然後重新分析問題，尋求團隊的幫助，最終成功解決了技術難題。</p>
+        </div>
+    </div>
+
+    <div class="question" id="q6">
+        <h2>Q6: 關於這份申請網頁，分享一個開發時的技術心得。</h2>
+        <div class="answer">
+            <p>在開發這份申請網頁時，我學會了如何有效地使用HTML錨點來實現頁面內部導航，提升用戶體驗。此外，通過CSS樣式的調整，使網頁在不同裝置上都有良好的顯示效果。</p>
+        </div>
+    </div>
+
+    <div class="question" id="q7">
+        <h2>Q7: 如何看待自身工作和整個社會群體的連結關係？</h2>
+        <div class="answer">
+            <p>我認為每個人的工作都是社會運作的一部分，透過軟體開發，我希望能夠創造出有價值的產品，改善人們的生活質量。同時，我也積極參與社群活動，分享知識，促進技術交流，強化個人與社會的連結。</p>
+        </div>
+    </div>
+
+    <div class="question" id="q8">
+        <h2>Q8: 其他想要對我們說的事情？</h2>
+        <div class="answer">
+            <p>感謝Wehelp Bootcamp提供這個寶貴的機會，我期待能夠加入這個充滿活力的學習環境，與大家共同努力，實現我們的目標。</p>
+        </div>
+    </div>
+
 </body>
 </html>
